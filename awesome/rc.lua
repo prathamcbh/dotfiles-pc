@@ -125,7 +125,7 @@ local editorgui         = "atom"
 local filemanager       = "thunar"
 local mailclient        = "evolution"
 local mediaplayer       = "spotify"
-local terminal          = "terminator"
+local terminal          = "alacritty"
 local virtualmachine    = "virt-manager"
 
 -- awesome variables
@@ -1174,3 +1174,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
 awful.spawn.with_shell("xrandr --output HDMI-A-0 --set TearFree on")
+awful.spawn.with_shell("xrandr --output DVI-D-0 --set TearFree on")
