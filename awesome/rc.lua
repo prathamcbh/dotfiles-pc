@@ -117,7 +117,7 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser1          = "brave"
+local browser1          = "firefox"
 local browser2          = "firefox"
 local browser3          = "chromium -no-default-browser-check"
 local editor            = "vim"
@@ -311,7 +311,7 @@ globalkeys = my_table.join(
     -- dmenu
     awful.key({ modkey, "shift" }, "d",
     function ()
-        awful.spawn(string.format("dmenu_run.bak -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
+        awful.spawn(string.format("dmenu_run.bak -i -fn NotoMonoRegular:bold:pixelsize=14",-- -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
 	end,
     {description = "show dmenu", group = "hotkeys"}),
@@ -319,7 +319,7 @@ globalkeys = my_table.join(
     -- dmenu terminal
     awful.key({ modkey }, "r",
     function ()
-        awful.spawn(string.format("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
+        awful.spawn(string.format("dmenu_run -i -fn NotoMonoRegular:bold:pixelsize=14", -- -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
   	end,
     {description = "run dmenu terminal", group = "hotkeys"}),
@@ -334,8 +334,8 @@ globalkeys = my_table.join(
         {description = browser1, group = "function keys"}),
     awful.key({ modkey }, "F2", function () awful.util.spawn( "spotify" ) end,
         {description = "Spotify" , group = "function keys" }),
-    awful.key({ modkey }, "F3", function () awful.util.spawn( filemanager ) end,
-        {description = filemanager ,group = "function keys" }),
+    awful.key({ modkey }, "F3", function () awful.util.spawn( "virt-manager" ) end,
+        {description = "virt-manager" ,group = "function keys" }),
    -- awful.key({ modkey }, "F4", function () awful.util.spawn( "gimp" ) end,
    --     {description = "gimp" , group = "function keys" }),
   --awful.key({ modkey }, "F5", function () awful.util.spawn( "meld" ) end,
@@ -384,44 +384,8 @@ globalkeys = my_table.join(
 
 
     -- ctrl+alt +  ...
-    awful.key({ modkey1, altkey   }, "w", function() awful.util.spawn( "arcolinux-welcome-app" ) end,
-        {description = "ArcoLinux Welcome App", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "e", function() awful.util.spawn( "arcolinux-tweak-tool" ) end,
-        {description = "ArcoLinux Tweak Tool", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "Next", function() awful.util.spawn( "conky-rotate -n" ) end,
-        {description = "Next conky rotation", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "Prior", function() awful.util.spawn( "conky-rotate -p" ) end,
-        {description = "Previous conky rotation", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "a", function() awful.util.spawn( "xfce4-appfinder" ) end,
-        {description = "Xfce appfinder", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "b", function() awful.util.spawn( filemanager ) end,
-        {description = filemanager, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "c", function() awful.util.spawn("catfish") end,
-        {description = "catfish", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "f", function() awful.util.spawn( browser2 ) end,
-        {description = browser2, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "g", function() awful.util.spawn( browser3 ) end,
-        {description = browser3, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "i", function() awful.util.spawn("nitrogen") end,
-        {description = nitrogen, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "k", function() awful.util.spawn( "arcolinux-logout" ) end,
-        {description = scrlocker, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "l", function() awful.util.spawn( "arcolinux-logout" ) end,
-        {description = scrlocker, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "o", function() awful.spawn.with_shell("$HOME/.config/awesome/scripts/picom-toggle.sh") end,
-        {description = "Picom toggle", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "s", function() awful.util.spawn( mediaplayer ) end,
-        {description = mediaplayer, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "t", function() awful.util.spawn( terminal ) end,
-        {description = terminal, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "u", function() awful.util.spawn( "pavucontrol" ) end,
-        {description = "pulseaudio control", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "Return", function() awful.util.spawn(terminal) end,
-        {description = terminal, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "m", function() awful.util.spawn( "xfce4-settings-manager" ) end,
-        {description = "Xfce settings manager", group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "p", function() awful.util.spawn( "pamac-manager" ) end,
-        {description = "Pamac Manager", group = "alt+ctrl"}),
+--    awful.key({ modkey1, altkey   }, "w", function() awful.util.spawn( "arcolinux-welcome-app" ) end,
+--        {description = "ArcoLinux Welcome App", group = "alt+ctrl"}),
 
     -- alt + ...
     awful.key({ altkey, "Shift"   }, "t", function () awful.spawn.with_shell( "variety -t  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&" ) end,
@@ -1160,15 +1124,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- }}}
 
--- window transperancy
--- client.connect_signal("focus", function(c)
---                              c.border_color = beautiful.border_focus
---                              c.opacity = 1
---                           end)
---client.connect_signal("unfocus", function(c)
---                                c.border_color = beautiful.border_normal
---                                c.opacity = 0.9
---                             end)
 
 -- Autostart applications
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
