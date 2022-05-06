@@ -1129,6 +1129,13 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
      awful.button({ }, 3, function () mymainmenu:toggle() end)))
 --     -- }}}
 
+-- Run garbage collector regularly to prevent memory leaks
+ gears.timer {
+        timeout = 30,
+               autostart = true,
+               callback = function() collectgarbage() end
+             }
+
 -- Autostart applications
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
