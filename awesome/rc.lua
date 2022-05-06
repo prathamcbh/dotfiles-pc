@@ -1124,6 +1124,10 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- }}}
 
+-- {{{ Disable changing tags with mouse scroll 
+ root.buttons(awful.util.table.join(
+     awful.button({ }, 3, function () mymainmenu:toggle() end)))
+--     -- }}}
 
 -- Autostart applications
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
