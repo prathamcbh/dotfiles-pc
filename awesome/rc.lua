@@ -127,7 +127,7 @@ local mailclient        = "evolution"
 local mediaplayer       = "spotify"
 local terminal          = "alacritty"
 local virtualmachine    = "virt-manager"
-
+local git               = "github-desktop"
 -- awesome variables
 awful.util.terminal = terminal
 --awful.util.tagnames = {  "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒" }
@@ -335,8 +335,8 @@ globalkeys = my_table.join(
         {description = browser1, group = "function keys"}),
     awful.key({ modkey }, "F2", function () awful.util.spawn( "spotify" ) end,
         {description = "Spotify" , group = "function keys" }),
-    awful.key({ modkey }, "F3", function () awful.util.spawn( "virt-manager" ) end,
-        {description = "virt-manager" ,group = "function keys" }),
+    awful.key({ modkey }, "F3", function () awful.util.spawn( "github-desktop" ) end,
+        {description = "github-desktop" ,group = "function keys" }),
    -- awful.key({ modkey }, "F4", function () awful.util.spawn( "gimp" ) end,
    --     {description = "gimp" , group = "function keys" }),
   --awful.key({ modkey }, "F5", function () awful.util.spawn( "meld" ) end,
@@ -907,8 +907,8 @@ awful.rules.rules = {
 --   { rule = { class = spotify },
 --      properties = { screen = 1, tag = awful.util.tagnames[➒], switchtotag = true  } },
 
-    --{ rule = { class = browser1 },
-      --properties = { screen = 1, tag = awful.util.tagnames[1], switchtotag = true  } },
+    { rule = { class = git },
+      properties = { screen = 1, tag = awful.util.tagnames[3], switchtotag = true  } },
 
     --{ rule = { class = "Vivaldi-stable" },
         --properties = { screen = 1, tag = awful.util.tagnames[1], switchtotag = true } },
