@@ -371,7 +371,7 @@ globalkeys = my_table.join(
         {description = "pulseaudio control", group = "super"}),
     --awful.key({ modkey }, "u", function () awful.screen.focused().mypromptbox:run() end,
           --{description = "run prompt", group = "super"}),
-    awful.key({ modkey }, "x",  function () awful.util.spawn( "arcolinux-logout" ) end,
+    awful.key({ modkey }, "x",  function () awful.util.spawn( "archlinux-logout" ) end,
       {description = "exit", group = "hotkeys"}),
     awful.key({ modkey }, "Escape", function () awful.util.spawn( "xkill" ) end,
         {description = "Kill proces", group = "hotkeys"}),
@@ -568,9 +568,9 @@ globalkeys = my_table.join(
     end, {description = "Toggle systray visibility", group = "awesome"}),
 
  -- Show/Hide Systray
- --   awful.key({ modkey }, "KP_Subtract", function ()
- --   awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible
- --   end, {description = "Toggle systray visibility", group = "awesome"}),
+    awful.key({ modkey }, "KP_Subtract", function ()
+    awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible
+    end, {description = "Toggle systray visibility", group = "awesome"}),
 
 
 
