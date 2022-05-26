@@ -1133,6 +1133,12 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
                callback = function() collectgarbage() end
              }
 
+-- {{{ Prevent the mouse scroll whell from changing tags 
+ root.buttons(awful.util.table.join(
+     awful.button({ }, 3, function () mymainmenu:toggle() end)))
+-- }}}
+
+
 -- Autostart applications
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
