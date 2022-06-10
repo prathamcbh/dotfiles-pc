@@ -1135,7 +1135,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- {{{ Prevent the mouse scroll whell from changing tags 
  root.buttons(awful.util.table.join(
-     awful.button({ }, 3, function () mymainmenu:toggle() end)))
+     awful.button({ }, 3, function ()  end)))
 -- }}}
 
 
