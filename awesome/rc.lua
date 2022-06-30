@@ -132,7 +132,8 @@ local git               = "github-desktop"
 awful.util.terminal = terminal
 --awful.util.tagnames = {  "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒" }
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
-awful.util.tagnames = { "", "", "", "", "" }
+--awful.util.tagnames = { "", "", "", "", "" }
+awful.util.tagnames = { "", "","", "", "" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
 --awful.util.tagnames = { "www", "edit", "gimp", "inkscape", "music" }
 -- Use this : https://fontawesome.com/cheatsheet
