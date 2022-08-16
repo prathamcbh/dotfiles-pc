@@ -118,14 +118,14 @@ local modkey1      = "Control"
 -- personal variables
 --change these variables if you want
 local browser1          = "firefox"
-local browser2          = "firefox"
+local browser2          = "brave"
 local browser3          = "chromium -no-default-browser-check"
 local editor            = "vim"
-local editorgui         = "atom"
+local editorgui         = "code"
 local filemanager       = "thunar"
 local mailclient        = "evolution"
 local mediaplayer       = "spotify"
-local terminal          = "alacritty"
+local terminal          = "termite"
 local virtualmachine    = "virt-manager"
 local git               = "github-desktop"
 -- awesome variables
@@ -313,7 +313,7 @@ globalkeys = my_table.join(
     -- dmenu
     awful.key({ modkey, "shift" }, "d",
     function ()
-        awful.spawn(string.format("dmenu_run.bak -i -fn NotoMonoRegular:bold:pixelsize=14",-- -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
+        awful.spawn(string.format("dmenu_run.bak -i -fn NotoMonoRegular:bold:pixelsize=14",-- -nb '#FF79C6' -nf '#FF79C6' -sb '#FF79C6' -sf '#FF79C6' -fn NotoMonoRegular:bold:pixelsize=14",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
 	end,
     {description = "show dmenu", group = "hotkeys"}),
@@ -908,8 +908,13 @@ awful.rules.rules = {
 --   { rule = { class = spotify },
 --      properties = { screen = 1, tag = awful.util.tagnames[➒], switchtotag = true  } },
 
+--    { rule = { class = git },
+--      properties = { screen = 1, tag = awful.util.tagnames[3], switchtotag = true  } },
+    
     { rule = { class = git },
-      properties = { screen = 1, tag = awful.util.tagnames[3], switchtotag = true  } },
+      properties = { tag = "3" , switchtotag = true  } },
+
+
 
     --{ rule = { class = "Vivaldi-stable" },
         --properties = { screen = 1, tag = awful.util.tagnames[1], switchtotag = true } },
@@ -1021,6 +1026,7 @@ awful.rules.rules = {
           "Skype",
           "System-config-printer.py",
           "Sxiv",
+          "Steam",
           "Unetbootin.elf",
           "Wpa_gui",
           "pinentry",

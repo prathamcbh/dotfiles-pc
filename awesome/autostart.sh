@@ -23,3 +23,5 @@ run conky -c $HOME/.config/awesome/system-overview
 #you can set wallpapers in themes as well
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run applications from startup
+xrandr --output HDMI-A-0 --auto
+kdeconnect-indicator
