@@ -43,8 +43,6 @@ local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
 -- }}}
 
-
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -336,10 +334,10 @@ globalkeys = my_table.join(
         {description = browser1, group = "function keys"}),
     awful.key({ modkey }, "F2", function () awful.util.spawn( "spotify" ) end,
         {description = "Spotify" , group = "function keys" }),
-    awful.key({ modkey }, "F3", function () awful.util.spawn( "github-desktop" ) end,
-        {description = "github-desktop" ,group = "function keys" }),
-   -- awful.key({ modkey }, "F4", function () awful.util.spawn( "gimp" ) end,
-   --     {description = "gimp" , group = "function keys" }),
+    awful.key({ modkey }, "F3", function () awful.util.spawn( "code" ) end,
+        {description = "code" ,group = "function keys" }),
+   -- awful.key({ modkey }, "F4", function () awful.util.spawn( "github" ) end,
+   --     {description = "github-desktop" , group = "function keys" }),
   --awful.key({ modkey }, "F5", function () awful.util.spawn( "meld" ) end,
    --   {description = "meld" , group = "function keys" }),
 --  awful.key({ modkey }, "F6", function () awful.util.spawn( "vlc --video-on-top" ) end,
@@ -376,8 +374,8 @@ globalkeys = my_table.join(
       {description = "exit", group = "hotkeys"}),
     awful.key({ modkey }, "Escape", function () awful.util.spawn( "xkill" ) end,
         {description = "Kill proces", group = "hotkeys"}),
-
-    -- super + shift + ...
+    
+        -- super + shift + ...
     awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn( filemanager ) end),
 
 
@@ -1144,7 +1142,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
  root.buttons(awful.util.table.join(
      awful.button({ }, 3, function ()  end)))
 -- }}}
-
 
 -- Autostart applications
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")

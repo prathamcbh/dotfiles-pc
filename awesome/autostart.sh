@@ -18,10 +18,12 @@ run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run numlockx on
 run nitrogen --restore
 run conky -c $HOME/.config/awesome/system-overview
-#run conky -c $HOME/.config/awesome/conky_config
+run conky -c $HOME/.config/awesome/conky_config
 
 #you can set wallpapers in themes as well
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run applications from startup
-xrandr --output HDMI-A-0 --auto
+run xrandr --output HDMI-A-0 --primary --mode 1920x1080
 kdeconnect-indicator
+flameshot
+safeeyes
