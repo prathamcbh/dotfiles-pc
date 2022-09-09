@@ -103,7 +103,7 @@ local themes = {
 }
 
 -- choose your theme here
-local chosen_theme = themes[3]
+local chosen_theme = themes[5]
 
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
@@ -1142,6 +1142,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
  root.buttons(awful.util.table.join(
      awful.button({ }, 3, function ()  end)))
 -- }}}
+
+beautiful.useless_gap = 5
 
 -- Autostart applications
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
