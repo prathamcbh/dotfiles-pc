@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/etc/X11/xinit'
 let g:netrw_dirhist_2='/home/pratham/.config/awesome'
 let g:netrw_dirhist_1='/usr/share/themes'
 let g:netrw_dirhist_0='/home/pratham/projects/git-clones/docker-xampp/src/application/views/reports'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/home/pratham/projects/git-clones/docker-xampp/src/applic
 let g:netrw_dirhist_6='/home/pratham/projects/git-clones/docker-xampp/src/application/views/reports'
 let g:netrw_dirhist_5='/home/pratham/projects/git-clones/docker-xampp/src/application/views'
 let g:netrw_dirhist_4='/home/pratham/projects/git-clones/docker-xampp/src/application/views/reports'
-let g:netrw_dirhist_3='/home/pratham/projects/docker/pkg'

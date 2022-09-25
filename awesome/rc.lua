@@ -131,7 +131,7 @@ awful.util.terminal = terminal
 --awful.util.tagnames = {  "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒" }
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "", "", "", "", "" }
-awful.util.tagnames = { "", "","", "", "" }
+awful.util.tagnames = { "", "","", "", "", " " }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
 --awful.util.tagnames = { "www", "edit", "gimp", "inkscape", "music" }
 -- Use this : https://fontawesome.com/cheatsheet
@@ -1149,4 +1149,4 @@ beautiful.useless_gap = 5
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
 awful.spawn.with_shell("xrandr --output HDMI-A-0 --set TearFree on")
-awful.spawn.with_shell("xrandr --output DVI-D-0 --set TearFree on")
+--awful.spawn.with_shell("xrandr --output DVI-D-0 --set TearFree on")

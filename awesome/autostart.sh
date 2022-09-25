@@ -23,7 +23,8 @@ run conky -c $HOME/.config/awesome/conky_config
 #you can set wallpapers in themes as well
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run applications from startup
-run xrandr --output HDMI-A-0 --primary --mode 1920x1080
+run xrandr --output HDMI-A-0 --primary --mode 1920x1080 --set TearFree on
+run xrandr --output DVI-D-0 --off
 kdeconnect-indicator
 flameshot
 safeeyes
